@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  space:
+    build: .
+    volumes:
+      - .:/space_workdir
+    ports:
+      - 8000:8000
+    image: space_obj
+    container_name: space_obj_container 
+    command: python manage.py runserver 0.0.0.0:8000
